@@ -1,0 +1,23 @@
+﻿@page
+@model LibraryManagement.Models.BookManagement.CategoryDetailsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+   @foreach (var cat in Model.categoryDetails)
+   {
+       <p>Category id: @cat.Category_Id</p><p>Category Name: @cat.Category_Name</p>
+     
+   }
+</div>
+</body>
+</html>

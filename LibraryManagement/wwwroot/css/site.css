@@ -50,14 +50,24 @@ button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
 }
-
+.SiteMap-Header{
+  font-size: 16px;
+  padding: 4px;
+  background-color: #008575;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
-
+header{
+  text-align: center;
+}
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;

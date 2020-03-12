@@ -1,23 +1,19 @@
-﻿@page
-@model LibraryManagement.Models.BookManagement.CategoryDetailsModel
+﻿@model LibraryManagement.Models.View.CategoryDetailsViewModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<header><h1>All Categories</h1></header>
 <div>
-   @foreach (var cat in Model.categoryDetails)
-   {
-       <p>Category id: @cat.Category_Id</p><p>Category Name: @cat.Category_Name</p>
-     
-   }
+    <ul >
+        @foreach (var cat in Model.categoryDetails)
+        {
+          
+            <li>
+                <a class="SiteMap-Header" asp-area="" asp-controller="BookManagement" asp-action="ListBooksInCategory"  asp-route-id="@cat.Category_Id">@cat.Category_Name</a>
+            </li>
+       
+        }
+    </ul >
+    <a asp-area="" asp-controller="BookManagement" asp-action="AddCategoryForm">Add new Category</a>
 </div>
-</body>
-</html>

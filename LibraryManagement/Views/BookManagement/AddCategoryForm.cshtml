@@ -1,0 +1,14 @@
+﻿@model LibraryManagement.Models.View.CategoryDetailsViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <form asp-action="AddCategoryForm" asp-controller="BookManagement" method="post">
+     <label asp-for="_Category.Category_Name" >Category Name: </label>   <input asp-for="_Category.Category_Name"/><br/>
+          <span asp-validation-for="_Category.Category_Name" class="text-danger"></span>
+        <button type="submit">Create Category</button>
+    </form>
+
+</div>

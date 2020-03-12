@@ -1,0 +1,28 @@
+﻿@model LibraryManagement.Models.View.BookDetailsViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <table style="width:100%;border: #1c7430">
+      <tr>
+        <th>ISBN Code</th>
+        <th>Title</th>
+          <th>Language</th>
+          <th>Publication</th>
+      </tr>
+        @foreach (var book in Model.bookDetails)
+        {
+    
+            <tr>
+                <td>@book.ISBN_Code</td>
+                <td>@book.Book_Title</td>
+                <td>@book.Language</td>
+                 <td>@book.Publication_year</td>
+            </tr>
+          
+
+        }
+     </table>
+</div>
